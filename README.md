@@ -4,5 +4,10 @@ it's more like a collection of CSS that ended up turning into something kind of 
 
 you could technically call this an AMOLED theme I guess
 
+# screenshots
+![the main view](screenshots/main-view.png)
+![settings](screenshots/settings.png)
+![ben's profile](screenshots/profile-modal.png)
+
 # installation
 `cd powercord/src/Powercord/themes && git clone https://github.com/ezist/ezist-theme.git`
