@@ -1,0 +1,8 @@
+{
+    "name": "ezist's shit",
+    "description": "ezist's theme file so that Custom CSS doesn't get too fucked up",
+    "version": "1.0.0",
+    "author": "ezist#7571",
+    "theme": "theme.scss",
+    "license": "ISC"
+}
