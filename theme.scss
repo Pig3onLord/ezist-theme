@@ -24,6 +24,10 @@
 	--accentcolor: 255,169,5;		/*	blurple	-	default:	114,137,218		*/
 	--linkcolor: 255,251,13;		/*	link	-	default:	0,176,244		*/
 
+	/* ================= Old Settings ================== */
+    --width2: 70%;
+    --height2: 85%;
+
 	/* ================= RadialStatus ================== */
 	--rs-small-spacing: 1px;  /* spacing between avatar and status */
 	--rs-large-spacing: 2px;  /* spacing between avatar and status for user popouts & modals/profiles */
@@ -53,7 +57,6 @@
 
 /* ===== Hiding Elements ===== */
 .channelTextAreaDisabled-8rmlrp > div,
-button[style='background-image: url("https://powercord.dev/assets/github_color.png");'], /* Powercord GitHub Connection */
 .toolbar-1t6TWx > div:nth-child(1),
 .powercord-badge, /* Powercord Server Badge */
 [aria-label="Member List"], /* Member List Button */
@@ -63,7 +66,7 @@ button[style='background-image: url("https://powercord.dev/assets/github_color.p
 .wrapper-1Rf91z[aria-label="Servers sidebar"] >
 .scroller-2TZvBN >
 .tutorialContainer-SGrQ1h:nth-last-of-type(3) +
-.listItem-2P_4kh,
+.listItem-2P_4kh, .emptyChannelIcon-cc932w,
 .nowPlayingColumn-2sl4cE,
 .container-2lgZY8[href="/store"],
 .button-38aScr[aria-label="Send a gift"],
@@ -99,6 +102,28 @@ button[style='background-image: url("https://powercord.dev/assets/github_color.p
 .spotify-tooltip {max-width: 260px !important;}
 .note-3HfJZ5, .note-QfFU8y {
 	& > textarea {padding: 10px;}
+}
+.layer-v9HyYc, .popout-2iWAc- {
+    position: fixed !important;
+}
+.userPopout-3XzG_A .activityUserPopout-2yItg2 .allactivities-left, .userPopout-3XzG_A .activityUserPopout-2yItg2 .allactivities-right {
+     margin-right: 0;
+     margin-left: 0;
+     max-width: 0;
+     opacity: 0;
+     pointer-events: none;
+     transition: all 0.175s ease-in-out;
+}
+ .userPopout-3XzG_A .activityUserPopout-2yItg2:hover .allactivities-left, .userPopout-3XzG_A .activityUserPopout-2yItg2:hover .allactivities-right {
+     max-width: 32px;
+     opacity: 1;
+     pointer-events: all;
+}
+ .userPopout-3XzG_A .activityUserPopout-2yItg2:hover .allactivities-left {
+     margin-right: 8px;
+}
+ .userPopout-3XzG_A .activityUserPopout-2yItg2:hover .allactivities-right {
+     margin-left: 8px;
 }
 
 /* ===== Info Section for Theme ===== */
@@ -164,10 +189,6 @@ svg:active > .updateIconForeground-3tnNZn {
 Zere's Old Settings Module 
 -css snippet by Zerebos 
 */
-:root {
-    --width2: 60%;
-    --height2: 85%;
-}
 .layers-3iHuyZ {
     align-items: center;
     justify-content: center;
@@ -201,11 +222,23 @@ Zere's Old Settings Module
 		}
 	}
 }
-/**
- * Snippet from #css-snippets applied the Aug 7, 2020 at 4:58:50 PM
- * Created by Андроид#3161 (329535901938089995)
- * Snippet ID: 740168560029990932
- */
+
+/* ===== Blurs user profile notes ===== */
+.note-QfFU8y, .note-3HfJZ5 {
+	textarea {
+		filter: blur(5px);
+		transition: 200ms cubic-bezier(.2, .11, 0, 1);
+
+		&:focus, &:hover {
+			filter: none;
+			transition: 200ms cubic-bezier(.2, .11, 0, 1);
+		}
+	}
+}
+
+/* ===== Square spoilers ===== */
+.spoilerText-3p6IlD {border-radius: 0;}
+
 :root {
     --background-primary: var(--main-bg) !important;
     --background-secondary: var(--main-bg) !important;
@@ -221,11 +254,11 @@ Zere's Old Settings Module
 }
 .modal-yWgWj-, .cardPrimary-1Hv-to,
 .discordTweaksSettings .tweaks .tweakCard,
-.root-1gCeng, .container-3ayLPN {
+.root-1gCeng, .container-3ayLPN, .message-2qRu38 {
     background-color: var(--main-bg) !important;
     border-color: var(--border-colour) !important;
 }
-.perksModal-fSYqOq {background-color: var(--main-bg) !important;}
+.perksModal-fSYqOq, .container-1D34oG {background-color: var(--main-bg) !important;}
 .option-96V44q:after {background: none !important;}
 .discordTweaksSettings .tweaks .tweakCard {border-width: 1px;border-style: solid;}
 .userPopout-3XzG_A {
