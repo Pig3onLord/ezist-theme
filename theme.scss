@@ -4,6 +4,8 @@
 @import url('https://tropix126.github.io/BetterDiscordStuff/materialcons/base.css');
 @import url("https://gibbu.github.io/BetterDiscord-Themes/RadialStatus/base.css");
 @import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
+@import url('https://raw.githack.com/LuckFire/NameBadges/main/source/badgesrc.css');
+@import url('https://snapperito.github.io/Settings-Icons/settingsicons.css');
 
 /* ===== Configuration ===== */
 :root {
@@ -14,7 +16,7 @@
 	--chat-font-size: 11pt;
 	--border-colour: #242424;
 	--main-bg: #040404;
-	--wordmark: "Powercord";
+	--wordmark: "Powercord go brrrr";
 	--theme-version-text: "ezist's theme (1.4.0)";
 
 	/* ============= Adjustable Server Width =========== */
@@ -25,6 +27,9 @@
 	/* ================ Blurple Recolor ================ */
 	--accentcolor: 255,169,5;		/*	blurple	-	default:	114,137,218		*/
 	--linkcolor: 255,251,13;		/*	link	-	default:	0,176,244		*/
+	/* ===== Settings Icons ===== */
+	--settings-subscriptions: rgb(var(--accentcolor));
+	--settings-guild-premium: rgb(var(--accentcolor));
 
 	/* ================= Old Settings ================== */
     --width2: 70%;
@@ -113,13 +118,15 @@
 	width: var(--usrbg-modal-width);
 	height: var(--usrbg-modal-height);
 	.body-3ND3kc {height: calc(var(--usrbg-modal-height) - 271px);}
+	.topSectionPlaying-1J5E4n + .body-3ND3kc {height: calc(var(--usrbg-modal-height) - 424px);}
+	.topSectionSpotify-1lI0-P + .body-3ND3kc {height: calc(var(--usrbg-modal-height) - 340px);}
 }
 
 /* ===== Hiding Elements ===== */
 .channelTextAreaDisabled-8rmlrp > div,
-.toolbar-1t6TWx > div:nth-child(1),
 .powercord-badge, /* Powercord Server Badge */
 [aria-label="Member List"], /* Member List Button */
+[aria-label^="Mute channel"], /* Mute Channel Button*/
 .status-1fhblQ, .description-2L932D,
 .separator-2I32lJ,
 .scrollerSpacer-avRLaA,
@@ -138,7 +145,7 @@
 }
 
 /* ===== Custom Discord Wordmark ===== */
-.wordmark-2iDDfm:after {
+.wordmark-2iDDfm::after {
 	content: var(--wordmark);
 	/*color: white !important;*/
 	font-size: 14px;
@@ -236,6 +243,7 @@ div[aria-label="USER_SETTINGS"] .info-1VyQPT:last-child > div:last-child::after 
 	border-left: 1px solid var(--border-colour);
 	border-right: 1px solid var(--border-colour);
 }
+.hasBanner-14PPlG .header-2o-2hj {border: none;}
 .layer-3QrUeG[aria-label="USER_SETTINGS"],
 .layer-3QrUeG[aria-label="CHANNEL_SETTINGS"],
 .layer-3QrUeG[aria-label="GUILD_SETTINGS"], {
@@ -262,7 +270,8 @@ div:not(.contentWrapper-SvZHNd) > #emoji-picker-tab-panel {
 	border-right: 1px solid var(--border-colour);
 	border-bottom: 1px solid var(--border-colour);
 }
-.notice-1tZwqv, #pinned-messages .avatar-1BDn8e {border-radius: 0;}
+.blockquoteContainer-U5TVEi .blockquoteDivider-2hH8H6, .notice-1tZwqv,
+#pinned-messages .avatar-1BDn8e {border-radius: 0;}
 
 .wrapper-1Rf91z[aria-label="Servers sidebar"] > .scroller-2TZvBN {margin-top: 4px;}
 .scroller-2TZvBN > .listItem-2P_4kh {position: relative;bottom: 1px;padding-top:7px;margin-bottom:0;}
@@ -339,9 +348,9 @@ Zere's Old Settings Module
     --background-tertiary: var(--main-bg) !important;
     --background-accent: var(--main-bg) !important;
     --background-floating: var(--main-bg) !important;
-    --background-modifier-hover: var(--main-bg) !important;
+    --background-modifier-hover: #090909 !important;
     --background-modifier-active: var(--main-bg) !important;
-    --background-modifier-selected: var(--main-bg) !important;
+    --background-modifier-selected: #0f0f0f !important;
     --background-modifier-accent: var(--main-bg) !important;
     --channeltextarea-background: var(--main-bg) !important;
 }
@@ -351,8 +360,9 @@ Zere's Old Settings Module
     background-color: var(--main-bg) !important;
     border-color: var(--border-colour) !important;
 }
-.perksModal-fSYqOq, .container-1D34oG {background-color: var(--main-bg) !important;}
-.option-96V44q:after {background: none !important;}
+.perksModal-fSYqOq, .container-1D34oG, .scroller-3gAZLs, .autocompleteInner-zh20B_ {background-color: var(--main-bg) !important;}
+.selected-1Tbx07 {background-color: var(--background-modifier-selected) !important;}
+.option-96V44q::after {background: none !important;}
 .discordTweaksSettings .tweaks .tweakCard {border-width: 1px;border-style: solid;}
 .userPopout-3XzG_A {
 	border-color: var(--border-colour);
@@ -539,7 +549,7 @@ div:not(#status-picker) > .scroller-3BxosC > div:not(:first-of-type):not(:last-o
 	box-shadow: none;
 	width: 27px;
 }
-.markup-2BOw-j {
+.markup-2BOw-j, .placeholder-37qJjk {
 	font-family: var(--chat-font);
 	font-size: var(--chat-font-size) !important;
 }
@@ -551,7 +561,7 @@ div:not(#status-picker) > .scroller-3BxosC > div:not(:first-of-type):not(:last-o
 .text-2e2ZyG, .activityText-yGKsKm, .username-2b1r56, .title-3sZWYQ,
 .item-2hkk8m, .item-PXvHYJ, .item-1tOPte, .botText-1526X_,
 div[class*="reactionCount-"], .discriminator-xUhQkU, div[class*="resultsGroup"],
-.ui-tab-bar-header, .ui-tab-bar-item, .textRow-19NEd_,
+.ui-tab-bar-header, .ui-tab-bar-item, .textRow-19NEd_, .powercord-product,
 .ui-form-title, div[class*="header-"], .emptyText-6tYmO5,
 div[class*="contents-"], div[class*="description-"], .bodyTitle-Y0qMQz,
 div[class*="viewBody-"], div[class*="keybind-"], .input-cIJ7To,
@@ -616,3 +626,165 @@ div[class*="connectedAccountName-"] {
 		transform: rotate(180deg);
 	}
 }
+
+/**
+ * Snippet from #css-snippets applied the Sep 3, 2020 at 6:25:57 PM
+ * Created by DracoClaw#0065 (341680387979870219)
+ * Snippet ID: 747829832787820666
+ */
+/*Hide Scrollbar Tracks*/
+.scrollerBase-289Jih::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/**
+ * Snippet from #css-snippets applied the Sep 3, 2020 at 6:26:51 PM
+ * Created by botato#6883 (440990343899643943)
+ * Snippet ID: 744728814642397205
+ */
+.searchResultMessage-1fxgXh.hit-1fVM9e > div > .contents-2mQqc9 img,
+div[id^=pinned-messages-] .contents-2mQqc9 img {
+  top: 15px
+}
+
+/**
+ * Snippet from #css-snippets applied the Sep 3, 2020 at 6:29:41 PM
+ * Created by Lil Sizzurp#0001 (513654483495026699)
+ * Snippet ID: 738808699472183377
+ */
+.flexChild-faoVW3 > div:nth-of-type(2) > .selectable-2GY4I1 {
+  filter: blur(5px);
+  transition: filter 0.5s;
+}
+
+.flexChild-faoVW3 > div:nth-of-type(2) > .selectable-2GY4I1:hover {
+  filter: blur(0px);
+}
+
+/**
+ * Snippet from #css-snippets applied the Sep 3, 2020 at 6:37:32 PM
+ * Created by A user#8169 (264062457448759296)
+ * Snippet ID: 690593099566809088
+ */
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css);
+
+code, .codeLine-14BKbG { font-family: 'Fira Code', monospace; }
+
+/**
+ * Snippet from #css-snippets applied the Sep 8, 2020 at 8:24:52 AM
+ * Created by Skullbite#5245 (158750488563679232)
+ * Snippet ID: 752727634076631072
+ */
+.colorDefault-2K3EoJ[id="user-context-invite-to-server"] {
+    display: none;
+}
+
+.colorDefault-2K3EoJ[id="user-context-call"] {
+    display: none;
+}
+
+/**
+ * Snippet from #css-snippets applied the Sep 10, 2020 at 8:05:51 AM
+ * Created by NinjaCatMander#0760 (437491079869104138)
+ * Snippet ID: 753569397058306109
+ */
+:root {
+    --background-secondary: #050505 !important; /*Change this accordingly*/
+}
+.inspector-3LQtX9, .header-ywPcAE {
+    background: var(--background-secondary) !important;
+}
+/* remove emoji tooltip */
+.tooltip-2QfLtc .clickCTA-kIMiUd {
+  display: none;
+}
+
+/**
+ * Snippet from #css-snippets applied the Sep 14, 2020 at 3:40:06 PM
+ * Created by botato#6883 (440990343899643943)
+ * Snippet ID: 755165969965646005
+ */
+.theme-dark .regionSelectModal-12e-57 {
+  background: var(--background-primary) !important;
+}
+.theme-dark .regionSelectModalOption-2DSIZ3 {
+  background: var(--background-secondary) !important;
+  border-color: var(--background-secondary-alt) !important;
+}
+.theme-dark .regionSelectModalOption-2DSIZ3:hover {
+  border-color: var(--background-tertiary) !important;
+}
+/** 755165969965646005 */
+
+/**
+ * Snippet from #css-snippets applied the Sep 28, 2020 at 10:53:43 AM
+ * Created by Leeprky#1234 (224524143482241035)
+ * Snippet ID: 760166472387133512
+ */
+.total-members-count-box {
+  position: static !important;
+}
+/** 760166472387133512 */
+
+/**
+ * Snippet from #css-snippets applied the Sep 28, 2020 at 11:05:21 AM
+ * Created by MulverineX#0001 (178551656714076161)
+ * Snippet ID: 755225689594265722
+ */
+.total-members-count-box {
+    justify-content: left !important;
+  padding-top: 24px !important;
+}
+.total-members-count-box > div:first-child {
+    margin-bottom: 6px !important;
+}
+.total-members-count {
+    justify-content: left !important;
+}
+.total-members-count > span {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  font-weight: 600 !important;
+    text-transform: uppercase;  
+
+  color: var(--channels-default) !important;
+
+}
+.total-members-count > i {
+  display: none;
+}
+/** 755225689594265722 */
+
+/**
+ * Snippet from #css-snippets applied the Oct 6, 2020 at 5:34:06 PM
+ * Created by Tropical#4355 (254362351170617345)
+ * Snippet ID: 763158982105104404
+ */
+.connectedAccount-36nQx7 {
+    display:flex;
+    flex-wrap:wrap;
+    height:auto;
+}
+
+.connectedAccount-36nQx7 .connectedAccountIcon-3P3V6F {
+    width:24px;
+    height:24px;
+}
+.connectedAccount-36nQx7 .anchor-3Z-8Bb {
+    width:100%;
+    display:block;
+    position:relative;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    line-height:normal;
+}
+.connectedAccount-36nQx7 .anchor-3Z-8Bb svg {
+    display:none;
+}
+
+.connectedAccount-36nQx7 .anchor-3Z-8Bb:after {
+    content:attr(href);
+    width:100%;
+    white-space:nowrap;
+}
+/** 763158982105104404 */
