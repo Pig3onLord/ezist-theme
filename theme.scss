@@ -52,7 +52,7 @@
 .fa, .fas,
 #powercord-spotify-menu .colorDefault-2K3EoJ .checkbox-3s5GYZ {color: rgb(var(--accentcolor)) !important;}
 .spotify-seek-bar-progress, .barFill-23-gu- {background-color: rgb(var(--accentcolor)) !important;}
-.circleIcon-LvPL6c, #powercord-spotify-menu #powercord-spotify-menu-repeat + div[id*=-active] {
+.powercord-toast button:not(.colorGreen-29iAKY):not(.colorGrey-2DXtkV), .circleIcon-LvPL6c, #powercord-spotify-menu #powercord-spotify-menu-repeat + div[id*=-active] {
 	color: rgb(var(--accentcolor)) !important;
 }
 .circleIconButton-jET_ig.selected-ugP_am {
@@ -177,6 +177,7 @@
 .typing-2GQL18 {right: unset;}
 .cooldownWrapper-3joyFc {margin-left: initial !important;}
 .wrapper-39oAo3 {position: static;}
+.popoutContainer-1MXdqN {width: 20em;}
 
 /* ===== Show All Activities on Hover ===== */
 .userPopout-3XzG_A .activityUserPopout-2yItg2 {
@@ -553,11 +554,11 @@ div:not(#status-picker) > .scroller-3BxosC > div:not(:first-of-type):not(:last-o
 	font-family: var(--chat-font);
 	font-size: var(--chat-font-size) !important;
 }
-#status-picker .status-1fhblQ, .h3-3PDeKG {
+#status-picker .status-1fhblQ, .h3-3PDeKG, .title-31JmR4 {
 	font-weight: bold;
 }
-.name-3YKhmS, .name-uJV0GL, .name-3_Dsmg, .username-1A8OIy, /* Holy fuck why. */
-.title-3qD0b-, .membersGroup-v9BXpm, .username-3gJmXY,
+body, .name-3YKhmS, .name-uJV0GL, .name-3_Dsmg, .username-1A8OIy, /* Holy fuck why. */
+.title-3qD0b-, .membersGroup-v9BXpm, .username-3gJmXY, .title-31JmR4,
 .text-2e2ZyG, .activityText-yGKsKm, .username-2b1r56, .title-3sZWYQ,
 .item-2hkk8m, .item-PXvHYJ, .item-1tOPte, .botText-1526X_,
 div[class*="reactionCount-"], .discriminator-xUhQkU, div[class*="resultsGroup"],
@@ -660,15 +661,6 @@ div[id^=pinned-messages-] .contents-2mQqc9 img {
 .flexChild-faoVW3 > div:nth-of-type(2) > .selectable-2GY4I1:hover {
   filter: blur(0px);
 }
-
-/**
- * Snippet from #css-snippets applied the Sep 3, 2020 at 6:37:32 PM
- * Created by A user#8169 (264062457448759296)
- * Snippet ID: 690593099566809088
- */
-@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css);
-
-code, .codeLine-14BKbG { font-family: 'Fira Code', monospace; }
 
 /**
  * Snippet from #css-snippets applied the Sep 8, 2020 at 8:24:52 AM
