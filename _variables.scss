@@ -1,0 +1,39 @@
+:root {
+	/* ================== ezist's shit ================= */
+	--everything-font: "Tahoma";
+	--everything-font-size: 11pt;
+	--chat-font: "Arial";
+	--chat-font-size: 11pt;
+	--border-colour: #242424;
+	--main-bg: #040404;
+	--wordmark: "Powercord go brrrr";
+	--theme-version-text: "ezist's theme (1.4.0)";
+
+	/* ============= Adjustable Server Width =========== */
+	--server-icon-size: 32px; /* Size of the server icons | DEFAULT: 35px */
+	--server-icon-spacing: 8px; /* Spacing between server icons. Negative values are allowed | DEFAULT: 8px */
+	--server-container-padding: 10px; /* Spacing to the left and right sides of server icons | DEFAULT: 10px */
+
+	/* ================ Blurple Recolor ================ */
+	--accentcolor: 255,169,5;		/*	blurple	-	default:	114,137,218		*/
+	--linkcolor: 255,251,13;		/*	link	-	default:	0,176,244		*/
+	/* ===== Settings Icons ===== */
+	--settings-subscriptions: rgb(var(--accentcolor));
+	--settings-guild-premium: rgb(var(--accentcolor));
+
+	/* ================= Old Settings ================== */
+    --width2: 70%;
+    --height2: 85%;
+
+	/* ================= RadialStatus ================== */
+	--rs-small-spacing: 1px;  /* spacing between avatar and status */
+	--rs-large-spacing: 2px;  /* spacing between avatar and status for user popouts & modals/profiles */
+	--rs-width: 2px;  /* Width/thickness of status border */
+	--rs-avatar-shape: 0%;  /* 50% for round - 0% for square */
+	--rs-online-color: #43b581;  /* color for online status */
+	--rs-idle-color: #faa61a;  /* color for idle status */
+	--rs-dnd-color: #f04747;  /* color for dnd status */
+	--rs-offline-color: #636b75;  /* color for offline status */
+	--rs-streaming-color: #643da7;  /* color for streaming status */
+	--rs-invisible-color: #747f8d;  /* color for invisible status - Note this will only show for your own invisibility */
+}

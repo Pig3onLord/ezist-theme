@@ -4,5 +4,7 @@
     "version": "1.4.0",
     "author": "ezist#7571",
     "theme": "theme.scss",
+	"splashTheme": "splash.scss",
+	"overlayTheme": "overlay.scss",
     "license": "ISC"
 }

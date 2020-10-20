@@ -12,3 +12,11 @@ this is compatible with **no** themes as far as I know
 
 # installation
 `cd powercord/src/Powercord/themes && git clone https://github.com/ezist/ezist-theme.git`
+
+# credits
+imported css from:
+* @NFLD99 (DiscordFont.css)
+* @Gibbu (AdjustableServerWidth, RadialStatus)
+* @mwittrien (BlurpleRecolor)
+* @tropix (materialcons)
+* @Snapperito (Settings-Icons)
