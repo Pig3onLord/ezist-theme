@@ -176,6 +176,7 @@ h2 ~ .powercord-text > div:first-child > .container-3auIfb {margin-left: auto}
 .layer-3QrUeG[aria-label$="_SETTINGS"] .standardSidebarView-3F1I7i {top: 0;}
 .reddit-tooltip {font-weight: bold}
 blockquote{height: fit-content}
+.container-Qj4uIL {z-index: 2}
 
 /* ===== Show All Activities on Hover ===== */
 .userPopout-3XzG_A .activityUserPopout-2yItg2 {
@@ -265,9 +266,9 @@ div[aria-label="USER_SETTINGS"] .info-1VyQPT:last-child > div:last-child::after 
 .recentMentionsPopout-3rCiI6, .attachPopout-36hjtN,
 div:not(.contentWrapper-SvZHNd) > #emoji-picker-tab-panel,
 .actionButtons-14eAc_ > button, .background-1QDuV2, .tooltip-2QfLtc,
-.connectionList-3pzR-1 > .connection-1fbD7X {
+.connectionList-3pzR-1 > .connection-1fbD7X, #a11y-hack .rq-inline {
 	border: 1px solid var(--border-colour) !important;
-	border-radius:5px;
+	border-radius: 5px !important
 }
 .tooltipPointer-3ZfirK {border-top-color: var(--border-colour) !important;}
 .background-1QDuV2 > .fieldList-21DyL8 {border-top: 1px solid var(--border-colour);border-radius: 0px;}
