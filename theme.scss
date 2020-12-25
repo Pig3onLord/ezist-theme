@@ -180,6 +180,16 @@ blockquote{height: fit-content}
 .headerText-3Uvj1Y + span[style="color: var(--text-muted); font-size: 0.9rem;"] {
   margin-right: 5px
 }
+.tutorialContainer-1v44GL + div > .dm-typing-indicator {
+  width: 100%;
+  margin-bottom: 8px;
+  h1, .spinner-2enMB9 {
+    width: fit-content;
+    display: inline-block
+  }
+}
+.onlineFriends-counter { padding-top: 8px; margin-bottom: -8px; }
+.tutorialContainer-1v44GL > .listItem-2P_4kh { margin-bottom: calc(var(--server-icon-spacing) - 1px) }
 
 /* ===== Show All Activities on Hover ===== */
 .userPopout-3XzG_A .activityUserPopout-2yItg2 {
@@ -232,7 +242,7 @@ div[aria-label="USER_SETTINGS"] .info-1VyQPT:last-child > div:last-child::after 
 /* ===== Borders ===== */
 .panels-j1Uci_ .container-3baos1,
 .channelTextArea-rNsIhG:not(.channelTextAreaDisabled-8rmlrp),
-.layers-3iHuyZ, .scroller-2TZvBN > .tutorialContainer-1v44GL + .listItem-2P_4kh,
+.layers-3iHuyZ, .scroller-2TZvBN > .listItem-2P_4kh > .onlineFriends-counter,
 .panels-j1Uci_ > .wrapper-24pKcD > .container-1giJp5 {
 	border-top: 1px solid var(--border-colour);
 	border-top-left-radius: 0px;
@@ -287,7 +297,6 @@ div:not(.contentWrapper-SvZHNd) > #emoji-picker-tab-panel,
 .repliedMessage-VokQwo:before {border-color: var(--border-colour);}
 
 .wrapper-1Rf91z[aria-label="Servers sidebar"] > .scroller-2TZvBN {margin-top: 4px;}
-.scroller-2TZvBN > .tutorialContainer-1v44GL + .listItem-2P_4kh {position: relative;bottom: 1px;padding-top:7px;margin-bottom:0;}
 
 /* ===== non-green-update-button ===== */
 svg > .updateIconForeground-3tnNZn {fill: var(--interactive-normal);}
@@ -468,16 +477,21 @@ div:not(.total-members-preview) > div > .membersWrap-2h-GB4 {
 .sidebar-2K8pFh, .base-3dtUhz {overflow: visible !important}
 .wrapper-1Rf91z .scroller-2TZvBN {padding-bottom: 500px}
 .scroller-2TZvBN > .listItem-2P_4kh, .onlineFriends-counter {width: 100% !important}
-.scroller-2TZvBN > div[style*="transform: scale(1);"] {
-	display: inline-block;
-	&:nth-of-type(3), &:nth-of-type(4) {padding-top: 4px}
-	&:nth-of-type(even) .pill-1m5BUr {
+.scroller-2TZvBN > .tutorialContainer-1v44GL {
+	& + .listItem-2P_4kh, & + div:not(.list-Item-2P_4kh) + .listItem-2P_4kh {
+		& ~ div[style*="transform: scale(1);"] {
+			display: inline-block;
+			&:nth-of-type(3), &:nth-of-type(4) {padding-top: 4px}
+			& + .listItem-2P_4kh {border-top: 1px solid var(--border-colour)}
+		}
+	}
+	& + .listItem-2P_4kh ~ div[style*="transform: scale(1);"]:nth-of-type(even) .pill-1m5BUr,
+	& + div:not(.listItem-2P_4kh) + .listItem-2P_4kh ~ div[style*="transform: scale(1);"]:nth-of-type(odd) .pill-1m5BUr {
 		top: 4px;
 		left: unset;
 		right: 0;
 		transform: rotate(180deg)
 	}
-	& + .listItem-2P_4kh {border-top: 1px solid var(--border-colour)}
 }
 .guildSeparator-3s64Iy {width: calc(100% - 20px)}
 #app-mount > .app-1q1i1E .members-1998pB .wrapper-3t9DeA .mask-1l8v16 > rect {
